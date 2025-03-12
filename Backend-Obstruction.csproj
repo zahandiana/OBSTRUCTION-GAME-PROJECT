@@ -1,0 +1,31 @@
+<Project Sdk="Microsoft.NET.Sdk.Web">
+
+  <PropertyGroup>
+    <TargetFramework>net6.0</TargetFramework>
+    <Nullable>enable</Nullable>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <RootNamespace>Backend_Obstruction</RootNamespace>
+    <Configurations>Debug;Release;Debug-Adicomsoft;Release-Adicomsoft</Configurations>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Swashbuckle.AspNetCore" Version="6.2.3" />
+  </ItemGroup>
+
+	<ItemGroup Condition="'$(Configuration)' == 'Release-Adicomsoft'">
+		<ProjectReference Include="..\ObstructionGameLib\ObstructionGameLib.csproj" />
+	</ItemGroup>
+
+	<ItemGroup Condition="'$(Configuration)' == 'Debug-Adicomsoft'">
+		<ProjectReference Include="..\ObstructionGameLib\ObstructionGameLib.csproj" />		
+	</ItemGroup>
+
+	<PropertyGroup Condition="'$(Configuration)' == 'Release-Adicomsoft'">
+		<DefineConstants>RELEASE;ADICOMSOFT</DefineConstants>
+	</PropertyGroup>
+
+	<PropertyGroup Condition="'$(Configuration)' == 'Debug-Adicomsoft'">
+		<DefineConstants>DEBUG;ADICOMSOFT</DefineConstants>
+	</PropertyGroup>
+
+</Project>
