@@ -1,5 +1,4 @@
-# Obstruction Game - Backend & Frontend
-
+# Obstruction Game 
 ## 📌 Descriere
 Acest proiect este o aplicație completă pentru jocul **Obstruction**, implementată folosind **C#** și **Angular**. Backend-ul gestionează logica jocului printr-un API RESTful, iar frontend-ul oferă o interfață interactivă pentru utilizatori.
 
